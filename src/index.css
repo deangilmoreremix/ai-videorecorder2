@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light dark;
+}
+
+@layer base {
+  body {
+    @apply bg-gray-100 text-gray-900;
+  }
+
+  select {
+    @apply text-gray-900 bg-white border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500;
+  }
+
+  select option {
+    @apply bg-white text-gray-900 py-2;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-lg font-medium transition-colors;
+  }
+  
+  .btn-primary {
+    @apply bg-blue-600 text-white hover:bg-blue-700;
+  }
+  
+  .btn-danger {
+    @apply bg-red-600 text-white hover:bg-red-700;
+  }
+
+  .select-custom {
+    @apply block w-full px-3 py-2 text-gray-900 bg-white border border-gray-300 rounded-lg 
+      focus:ring-2 focus:ring-blue-500 focus:border-blue-500 cursor-pointer hover:border-blue-400
+      transition-colors duration-200;
+  }
+
+  .select-custom option {
+    @apply py-2 px-4 hover:bg-blue-50 cursor-pointer;
+  }
+}
